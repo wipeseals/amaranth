@@ -323,7 +323,7 @@ class TemplatedPlatform(Platform):
             if context.parent["syntax"] == "sh":
                 return f"\"${env_var}\""
             elif context.parent["syntax"] == "bat":
-                return f"\"%{env_var}%\""
+                return f"call %{env_var}%"
             else:
                 assert False
 
